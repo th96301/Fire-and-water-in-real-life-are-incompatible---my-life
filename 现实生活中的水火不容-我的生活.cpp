@@ -3,44 +3,48 @@
 using namespace std;
 string shuru, temp;
 string GAMEMODE = "ready";
-int ml = 100, wl = 100, q = 0, wx = 100, mx = 100, days = 1, zz = 50;
-string you = "É£É£:", mom = "Ğ¡Ñ©:";
-//	cout <<  "*ÕâÊÇ¶ÁÊé*" << endl;
+int ml = 30, wl = 30, q = 0, wx = 20, mx = 20, days = 1, zz = 30;
+string you = "æ¡‘æ¡‘:", mom = "å°é›ª:";
+//	cout <<  "*è¿™æ˜¯è¯»ä¹¦*" << endl;
 //	Sleep(2500);
-//	cout << mom << "ÄÇ¾Í¿ìÀ´Ñ§Ï°£¡£¡"<< endl;
-//	cout << you  << "ÎÒÖªµÀÁË" << endl;
+//	cout << mom << "é‚£å°±å¿«æ¥å­¦ä¹ !!"<< endl;
+//	cout << you  << "æˆ‘çŸ¥é“äº†" << endl;
 //	cin >> shuru;
 
 int Fight() {
-	cout << mom << "£¡£¡£¡" << endl;
+	cout << mom << "!!!" << endl;
 	Sleep(1000);
-	cout <<  "*ÄãÂè´òÁËÄã£¬ÓĞµãÌÛ*" << endl;
+	cout <<  "*ä½ å¦ˆæ‰“äº†ä½ ï¼Œæœ‰ç‚¹ç–¼*" << endl;
 	wl = wl - 5;
 	mx = mx - 5;
 	Sleep(1000);
-	cout << "*»¹»÷£¿(ÖØ»÷/Çá»÷/²»ÁË)*" << endl;
+	cout << "*è¿˜å‡»?(é‡å‡»/è½»å‡»/ä¸äº†)*" << endl;
 	cin >> shuru;
-	if (shuru == "ÖØ»÷") {
-		cout <<  "*ÄãÖØ»÷ÁËÄãÂè*" << endl;
+	if (shuru == "é‡å‡»") {
+		cout <<  "*ä½ é‡å‡»äº†ä½ å¦ˆ*" << endl;
 		ml = ml - 10;
 		Sleep(1000);
 		cout << mom << "..." << endl;
 		mx = mx - 10;
 		wx = wx + 10;
-	} else if (shuru == "Çá»÷") {
-		cout <<  "*ÄãÇá»÷ÁËÄãÂè*" << endl;
+	} else if (shuru == "è½»å‡»") {
+		cout <<  "*ä½ è½»å‡»äº†ä½ å¦ˆ*" << endl;
 		ml = ml - 5;
 		Sleep(1000);
 		cout << mom << "..." << endl;
 		mx = mx - 5;
 		wx = wx + 5;
-	} else if (shuru == "²»ÁË") {
+	} else if (shuru == "ä¸äº†") {
 		cout << you  << "......" << endl;
 		Sleep(1000);
 		cout << mom << "..." << endl;
 		wx = wx - 5;
 	} else {
-
+		cout << mom << "??????" << endl;
+		cout << you  << "......" << endl;
+		Sleep(1000);
+		cout << mom << "..." << endl;
+		wx = wx - 5;
 	}
 	Sleep(1000);
 	return 0;
@@ -57,78 +61,81 @@ int Wait(int time) {
 }
 
 int Slept() {
-	cout << mom << "¸ÃË¯¾õÁË" << endl;;
-	cout << "*ÒªË¯¾õ(´æµµ)Âğ£¿(Òª/²»Òª)*" << endl;
+	cout << mom << "è¯¥ç¡è§‰äº†" << endl;
+	Sleep(2500);
+	cout << "*è¦ç¡è§‰(å­˜æ¡£)å—?(è¦/ä¸è¦)*" << endl;
 	cin >> shuru;
-	if (shuru == "Òª") {
-		cout << mom << "Ë¯°ÉË¯°É......" << endl;;
+	if (shuru == "è¦") {
+		cout << mom << "ç¡å§ç¡å§......" << endl;;
 		Sleep(2500);
 		mx++;
-		cout <<  "*Ë¯×ÅÁË......*" << endl;
-	} else if (shuru == "²»Òª") {
-		cout << mom << "²»£¬Äã Òª **** Ë¯ ¾õ" << endl;;
+		cout <<  "*ç¡ç€äº†......*" << endl;
+	} else if (shuru == "ä¸è¦") {
+		cout << mom << "ä¸ï¼Œä½  è¦ **** ç¡ è§‰" << endl;
 		Sleep(2500);
 		mx--;
 		wx--;
-		cout << you  << "ÎÒÖªµÀÁË" << endl;
+		cout << you  << "æˆ‘çŸ¥é“äº†" << endl;
 		Sleep(3000);
-		cout <<  "*Ë¯×ÅÁË......*" << endl;
+		cout <<  "*ç¡ç€äº†......*" << endl;
 	} else {
-		cout << mom << "ºúÑÔÂÒÓï£¿£¿¿ì À´ Ë¯ ¾õ£¡£¡" << endl;;
+		cout << mom << "èƒ¡è¨€ä¹±è¯­??å¿« æ¥ ç¡ è§‰!!" << endl;
 		Sleep(2500);
-		cout <<  "*Ë¯×ÅÁË......*" << endl;
+		cout <<  "*ç¡ç€äº†......*" << endl;
 	}
-	cout <<  "*±£´æÂë:" << ml << " " << wl << " " << q << " " << wx << " " << mx << " " << days << " " << zz << " " << ml + wl + q + wx + mx + days + zz << "*" << endl;
-	cout << "*ÇëÍ×ÉÆ±£¹Ü£¡*" << endl;
+	Wait(2);
+	cout <<  "*ä¿å­˜ç :" << ml << " " << wl << " " << q << " " << wx << " " << mx << " " << days << " " << zz << " " << ml + wl + q + wx + mx + days + zz << "*" << endl;
+	cout << "*è¯·å¦¥å–„ä¿ç®¡!*" << endl;
+	Wait(5);
 	if (ml <= 0) {
 		GAMEMODE = "momdie";
 	} else if (wl <= 0) {
 		GAMEMODE = "medie";
 	} else if (mx <= 0) {
-		ml = ml - 5;
+		ml = ml - 10;
 	} else if (wx <= 0) {
-		wl = wl - 5;
+		wl = wl - 10;
 	}
 	return 0;
 }
 
 int Read() {
-	cout <<  "*ÕâÊÇ¶ÁÊé*" << endl;
+	cout <<  "*è¿™æ˜¯è¯»ä¹¦*" << endl;
 	Wait(5);
 	if (zz >= 50) {
-		cout <<  "*ºÜÇáËÉµØ£¬ÕâÊé¶ÁÍêÁË*" << endl;
+		cout <<  "*å¾ˆè½»æ¾åœ°ï¼Œè¿™ä¹¦è¯»å®Œäº†*" << endl;
 		zz++;
 	}
 	if (zz < 50) {
-		cout <<  "*ºÜÀ§ÄÑµØ£¬ÕâÊé¶ÁÍêÁË*" << endl;
+		cout <<  "*å¾ˆå›°éš¾åœ°ï¼Œè¿™ä¹¦è¯»å®Œäº†*" << endl;
 		zz++;
 	}
 	return 0;
 }
 
 int Study() {
-	cout << "*ÒªË¯¾õ(´æµµ)Âğ£¿(Òª/²»Òª)*" << endl;
+	cout << "*è¦ç¡è§‰(å­˜æ¡£)å—?(è¦/ä¸è¦)*" << endl;
 	cin >> shuru;
-	if (shuru == "Òª") {
-		cout << mom << "²»ĞĞ£¬¿ìÀ´Ñ§Ï°£¡£¡" << endl;;
+	if (shuru == "è¦") {
+		cout << mom << "ä¸è¡Œï¼Œå¿«æ¥å­¦ä¹ !!" << endl;;
 		Sleep(2500);
-		cout <<  "*Ö»ÄÜÑ§Ï°ÁË*" << endl;
+		cout <<  "*åªèƒ½å­¦ä¹ äº†*" << endl;
 		Sleep(2500);
 		wx--;
 		mx--;
 		Read();
-	} else if (shuru == "²»Òª") {
-		cout << mom << "ÄÇ¾Í¿ìÀ´Ñ§Ï°£¡£¡" << endl;;
+	} else if (shuru == "ä¸è¦") {
+		cout << mom << "é‚£å°±å¿«æ¥å­¦ä¹ !!" << endl;;
 		Sleep(2500);
-		cout <<  "*Ñ§Ï°ÁË*" << endl;
+		cout <<  "*å­¦ä¹ äº†*" << endl;
 		Sleep(2500);
 		mx++;
 		wx++;
 		Read();
 	} else {
-		cout << mom << "ºúÑÔÂÒÓï£¿£¿¿ìÀ´Ñ§Ï°£¡£¡" << endl;;
+		cout << mom << "èƒ¡è¨€ä¹±è¯­??å¿«æ¥å­¦ä¹ !!" << endl;;
 		Sleep(2500);
-		cout <<  "*Ñ§Ï°ÁË*" << endl;
+		cout <<  "*å­¦ä¹ äº†*" << endl;
 		Sleep(2500);
 		Read();
 	}
@@ -136,97 +143,104 @@ int Study() {
 }
 
 int Math() {
-	cout <<  "*  5x+5=10  Õâx½ÚÊÇÊıÑ§*" << endl;
-	Sleep(2500);
+	cout <<  "*  5n+5=10  è¿™nèŠ‚æ˜¯æ•°å­¦*" << endl;
+	Wait(5);
 	if (zz >= 50) {
-		cout <<  "*ºÜÇáËÉµØ£¬Õâx½Ú¿ÎÍêÁË*" << endl;
+		cout <<  "*å¾ˆè½»æ¾åœ°ï¼Œè¿™nèŠ‚è¯¾å®Œäº†*" << endl;
 		zz++;
 	}
 	if (zz < 50) {
-		cout <<  "*ºÜÀ§ÄÑµØ£¬Õâx½Ú¿ÎÍêÁË*" << endl;
+		cout <<  "*å¾ˆå›°éš¾åœ°ï¼Œè¿™nèŠ‚è¯¾å®Œäº†*" << endl;
 		zz++;
 	}
 	return 0;
 }
 
 int Chinese() {
-	cout <<  "*´Ë¿ÌÎÒÃÇ²½ÈëµÄÊÇÓïÎÄµÄµîÌÃ£¬ÕâÀïÔÌ²Ø×Å»ªÏÄÎåÇ§ÄêµÄÎÄ»¯¾«Ëè¡£*" << endl;
+	cout <<  "*æ­¤åˆ»æˆ‘ä»¬æ­¥å…¥çš„æ˜¯è¯­æ–‡çš„æ®¿å ‚ï¼Œè¿™é‡Œè•´è—ç€åå¤äº”åƒå¹´çš„æ–‡åŒ–ç²¾é«“ã€‚*" << endl;
 	Wait(5);
 	if (zz >= 50) {
-		cout <<  "*ÕâÌÃ¿ÎÔÚÇáËÉÓä¿ìµÄ·ÕÎ§ÖĞÔ²Âú½áÊø¡£*" << endl;
+		cout <<  "*è¿™å ‚è¯¾åœ¨è½»æ¾æ„‰å¿«çš„æ°›å›´ä¸­åœ†æ»¡ç»“æŸã€‚*" << endl;
 		zz++;
 	}
 	if (zz < 50) {
-		cout <<  "*¾¡¹Ü³äÂúÌôÕ½£¬ÕâÌÃ¿ÎÖÕÓÚÔ²Âú½áÊø¡£*" << endl;
+		cout <<  "*å°½ç®¡å……æ»¡æŒ‘æˆ˜ï¼Œè¿™å ‚è¯¾ç»ˆäºåœ†æ»¡ç»“æŸã€‚*" << endl;
 		zz++;
 	}
 	return 0;
 }
 
 int English() {
-	cout <<  "*This class is English class*" << "(»ú·­:ÕâÃÅ¿ÎÊÇÓ¢Óï¿Î)" << endl;
+	cout <<  "*This class is English class*" << "(æœºç¿»:è¿™é—¨è¯¾æ˜¯è‹±è¯­è¯¾)" << endl;
 	Wait(5);
 	if (zz >= 50) {
-		cout <<  "*Easily,this English class is finish*" << "(»ú·­:ºÜÈİÒ×£¬ÕâÌÃÓ¢Óï¿Î¾ÍÍê³ÉÁË)" << endl;
+		cout <<  "*Easily,this English class is finish*" << "(æœºç¿»:å¾ˆå®¹æ˜“ï¼Œè¿™å ‚è‹±è¯­è¯¾å°±å®Œæˆäº†)" << endl;
 		zz++;
 	}
 	if (zz < 50) {
-		cout <<  "*Difficultily,this English class is finish*" << "(»ú·­:ÄÑ£¬Õâ½ÚÓ¢Óï¿Î¾Í½áÊøÁË)" << endl;
+		cout <<  "*Difficultily,this English class is finish*" << "(æœºç¿»:éš¾ï¼Œè¿™èŠ‚è‹±è¯­è¯¾å°±ç»“æŸäº†)" << endl;
 		zz++;
 	}
 	return 0;
 }
 
 int Eat() {
-	cout <<  "*ÄãÂèËÍÀ´ÁË·¹ºĞ*" << endl;
+	cout <<  "*ä½ å¦ˆé€æ¥äº†é¥­ç›’*" << endl;
 	Sleep(2500);
-	cout << mom << "¿ìÀ´³Ô·¹£¡£¡" << endl;
+	cout << mom << "å¿«æ¥åƒé¥­!!" << endl;
 	Sleep(2500);
-	cout <<  "*Òª³ÔÂğ£¿(³Ô/²»³Ô)*" << endl;
+	cout <<  "*è¦åƒå—?(åƒ/ä¸åƒ)*" << endl;
 	cin >> shuru;
-	if (shuru == "³Ô") {
-		cout << "À´À²£¡£¡" << endl;;
+	if (shuru == "åƒ") {
+		cout << you <<  "æ¥å•¦!!" << endl;;
 		mx ++;
-	} else if (shuru == "²»³Ô") {
-		cout << mom << "¿ì****À´³Ô·¹£¡£¡¿ì****À´³Ô·¹£¡£¡¿ì****À´³Ô·¹£¡£¡¿ì****À´³Ô·¹£¡£¡¿ì****À´³Ô·¹£¡£¡¿ì****À´³Ô·¹£¡£¡¿ì****À´³Ô·¹£¡£¡¿ì****À´³Ô·¹£¡£¡¿ì****À´³Ô·¹£¡£¡¿ì****À´³Ô·¹£¡£¡¿ì****À´³Ô·¹£¡£¡¿ì****À´³Ô·¹£¡£¡" << endl;;
+	} else if (shuru == "ä¸åƒ") {
+		cout << mom << "å¿«****æ¥åƒé¥­!!å¿«****æ¥åƒé¥­!!å¿«****æ¥åƒé¥­!!å¿«****æ¥åƒé¥­!!å¿«****æ¥åƒé¥­!!å¿«****æ¥åƒé¥­!!å¿«****æ¥åƒé¥­!!å¿«****æ¥åƒé¥­!!å¿«****æ¥åƒé¥­!!å¿«****æ¥åƒé¥­!!å¿«****æ¥åƒé¥­!!å¿«****æ¥åƒé¥­!!" << endl;;
 		Sleep(1000);
-		cout << you << "ÎÒ****À´À²£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡" << endl;;
+		cout << you << "æˆ‘****æ¥å•¦!!!!!!!!!!!!!!!!!!!!!!!!!!" << endl;;
 		mx--;
 		wx--;
 	} else {
-		cout << mom << "ºúÑÔÂÒÓïÉçÃ´£¬¿ì****À´³Ô·¹£¡£¡¿ì****À´³Ô·¹£¡£¡¿ì****À´³Ô·¹£¡£¡¿ì****À´³Ô·¹£¡£¡¿ì****À´³Ô·¹£¡£¡¿ì****À´³Ô·¹£¡£¡¿ì****À´³Ô·¹£¡£¡¿ì****À´³Ô·¹£¡£¡¿ì****À´³Ô·¹£¡£¡¿ì****À´³Ô·¹£¡£¡¿ì****À´³Ô·¹£¡£¡¿ì****À´³Ô·¹£¡£¡" << endl;;
+		cout << mom << "èƒ¡è¨€ä¹±è¯­ç¤¾ä¹ˆï¼Œå¿«****æ¥åƒé¥­!!å¿«****æ¥åƒé¥­!!å¿«****æ¥åƒé¥­!!å¿«****æ¥åƒé¥­!!å¿«****æ¥åƒé¥­!!å¿«****æ¥åƒé¥­!!å¿«****æ¥åƒé¥­!!å¿«****æ¥åƒé¥­!!å¿«****æ¥åƒé¥­!!å¿«****æ¥åƒé¥­!!å¿«****æ¥åƒé¥­!!å¿«****æ¥åƒé¥­!!" << endl;;
 		Sleep(1000);
-		cout << you << "ÎÒ****À´À²£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡" << endl;;
+		cout << you << "æˆ‘****æ¥å•¦!!!!!!!!!!!!!!!!!!!!!!!!!!" << endl;;
 		mx--;
 	}
 	return 0;
 }
 
 int Test() {
-	cout <<  "*ÕâÊÇ¿¼ÊÔ*" << endl;
+	cout <<  "*è¿™æ˜¯è€ƒè¯•*" << endl;
 	Wait(5);
 	if (zz > 50) {
-		cout << you  << "ºÃÇáËÉ£¡" << endl;
+		cout << you  << "å¥½è½»æ¾!" << endl;
 		Sleep(2500);
-		cout << mom << "¿¼µÄºÃ²»£¿" << endl;
-		cout <<  "*(ºÃ/²»ºÃ)*" << endl;
+		cout << mom << "è€ƒçš„å¥½ä¸?" << endl;
+		Sleep(2500);
+		cout <<  "*(å¥½/ä¸å¥½)*" << endl;
 		cin >> shuru;
-		if (shuru == "ºÃ") {
-			cout << mom << "ºÃ£¡£¡" << endl;
-		} else if (shuru == "²»ºÃ") {
-			cout << mom << "ÀÏÊ¦ËµÄã¿¼µÄºÃ£¡£¡" << endl;
+		if (shuru == "å¥½") {
+			cout << mom << "å¥½!!" << endl;
+		} else if (shuru == "ä¸å¥½") {
+			cout << mom << "è€å¸ˆè¯´ä½ è€ƒçš„å¥½!!" << endl;
+		} else {
+			cout << mom << "..." << endl;
 		}
 		mx = mx + 5;
 	}
 	if (zz <= 50) {
-		cout << you  << "ºÃÄÑ£¡" << endl;
+		cout << you  << "å¥½éš¾!" << endl;
 		Sleep(2500);
-		cout << mom << "¿¼µÄºÃ²»£¿" << endl;
+		cout << mom << "è€ƒçš„å¥½ä¸?" << endl;
+		Sleep(2500);
+		cout <<  "*(å¥½/ä¸å¥½)*" << endl;
 		cin >> shuru;
-		if (shuru == "ºÃ") {
-			cout << mom << "ÀÏÊ¦ËµÄã¿¼µÄ²»ºÃ£¡£¡" << endl;
-		} else if (shuru == "²»ºÃ") {
-			cout << mom << "ÈÃÄã¶à¶ÁÊé£¡£¡£¡" << endl;
+		if (shuru == "å¥½") {
+			cout << mom << "è€å¸ˆè¯´ä½ è€ƒçš„ä¸å¥½!!" << endl;
+		} else if (shuru == "ä¸å¥½") {
+			cout << mom << "è®©ä½ å¤šè¯»ä¹¦!!!" << endl;
+		} else {
+			cout << mom << "..." << endl;
 		}
 		mx = mx - 5;
 	}
@@ -236,17 +250,17 @@ int Test() {
 
 int Day(int day) {
 	if (day == 1) {
-		cout << "*¾çÇé:Äã½ĞÉ£É££¬ÄãÂè½ĞĞ¡Ñ©¡£ÄãÊÇÒ»¸öÏòÍùºÍĞ³ÃÀºÃ¼ÒÍ¥£¬²»Ïë±»Ç¿ÆÈµÄÇàÉÙÄê*(µÈ´ı)" << endl;
+		cout << "*å‰§æƒ…:ä½ å«æ¡‘æ¡‘ï¼Œä½ å¦ˆå«å°é›ªã€‚ä½ æ˜¯ä¸€ä¸ªå‘å¾€å’Œè°ç¾å¥½å®¶åº­ï¼Œä¸æƒ³è¢«å¼ºè¿«çš„é’å°‘å¹´*(ç­‰å¾…)" << endl;
 		Sleep(1500);
-		cout << "*µ«ÏÖÊµÉú»îÄãÂè´ßÄã×öÊÂ£¬Ã»ÓĞĞİÏ¢£¬Ö»ÓĞÑ§Ï°£¡£¡£¡*" << endl;
+		cout << "*ä½†ç°å®ç”Ÿæ´»ä½ å¦ˆå‚¬ä½ åšäº‹ï¼Œæ²¡æœ‰ä¼‘æ¯ï¼Œåªæœ‰å­¦ä¹ !!!*" << endl;
 		Sleep(2500);
-		cout << "*Äã»¹ÒªÔÚ21ÌìºóÖĞ¿¼£¡£¡£¡*" << endl;
+		cout << "*ä½ è¿˜è¦åœ¨21å¤©åä¸­è€ƒ!!!*" << endl;
 		Sleep(2500);
-		cout << mom  << "É£É£,¿ìÆğÀ´À²£¬ÉÏÑ§³Ùµ½À²£¡£¡£¡" << endl;
+		cout << mom  << "æ¡‘æ¡‘,å¿«èµ·æ¥å•¦ï¼Œä¸Šå­¦è¿Ÿåˆ°å•¦!!!" << endl;
 		Sleep(2500);
-		cout << you  << "ÎÒÖªµÀÁË" << endl;
+		cout << you  << "æˆ‘çŸ¥é“äº†" << endl;
 		Sleep(2500);
-		cout <<  "*Äãµ½ÁËÑ§Ğ£*" << endl;
+		cout <<  "*ä½ åˆ°äº†å­¦æ ¡*" << endl;
 		Sleep(2500);
 		Math();
 		Sleep(2500);
@@ -254,20 +268,20 @@ int Day(int day) {
 		Sleep(2500);
 		Chinese();
 		Sleep(2500);
-		cout <<  "*·ÅÑ§ÁË*" << endl;
+		cout <<  "*æ”¾å­¦äº†*" << endl;
 		Sleep(2500);
-		cout <<  "*Äãµ½ÁË¼Ò*" << endl;
+		cout <<  "*ä½ åˆ°äº†å®¶*" << endl;
 		Sleep(2500);
 		Study();
 		Sleep(2500);
 		Slept();
 	}
 	if (day == 2) {
-		cout << mom  << "É£É£,¿ìÆğÀ´À²£¬ÉÏÑ§ÓÖ³Ùµ½À²£¡£¡£¡Äã×òÍíË¯µÃÌ«ÍíÁË£¡£¡£¡" << endl;
+		cout << mom  << "æ¡‘æ¡‘,å¿«èµ·æ¥å•¦ï¼Œä¸Šå­¦åˆè¿Ÿåˆ°å•¦!!!ä½ æ˜¨æ™šç¡å¾—å¤ªæ™šäº†!!!" << endl;
 		Sleep(2500);
 		cout << you  << "..." << endl;
 		Sleep(2500);
-		cout <<  "*Äãµ½ÁËÑ§Ğ£*" << endl;
+		cout <<  "*ä½ åˆ°äº†å­¦æ ¡*" << endl;
 		Sleep(2500);
 		English();
 		Sleep(2500);
@@ -275,66 +289,66 @@ int Day(int day) {
 		Sleep(2500);
 		Chinese();
 		Sleep(2500);
-		cout <<  "*·ÅÑ§ÁË*" << endl;
+		cout <<  "*æ”¾å­¦äº†*" << endl;
 		Sleep(2500);
-		cout <<  "*Äãµ½ÁË¼Ò*" << endl;
+		cout <<  "*ä½ åˆ°äº†å®¶*" << endl;
 		Sleep(2500);
 		Study();
 		Sleep(2500);
 		Slept();
 	}
 	if (day == 3) {
-		cout << mom  << "É£É£,¿ìÆğÀ´À²£¬ÉÏÑ§ÓÖ³Ùµ½À²£¡£¡£¡Äã×òÍíË¯µÃÌ«ÍíÁË£¡£¡£¡" << endl;
+		cout << mom  << "æ¡‘æ¡‘,å¿«èµ·æ¥å•¦ï¼Œä¸Šå­¦åˆè¿Ÿåˆ°å•¦!!!ä½ æ˜¨æ™šç¡å¾—å¤ªæ™šäº†!!!" << endl;
 		Sleep(2500);
-		cout << you  << "¶¼¹ÖÄã£¡£¡" << endl;
+		cout << you  << "éƒ½æ€ªä½ !!" << endl;
 		Sleep(2500);
 		Fight();
 		Sleep(2500);
-		cout <<  "*Äãµ½ÁËÑ§Ğ£*" << endl;
+		cout <<  "*ä½ åˆ°äº†å­¦æ ¡*" << endl;
 		Sleep(2500);
-		cout << "*Äã³Ùµ½ÁË*" << endl;
+		cout << "*ä½ è¿Ÿåˆ°äº†*" << endl;
 		Sleep(2500);
 		Eat();
 		Sleep(2500);
 		Chinese();
 		Sleep(2500);
-		cout <<  "*·ÅÑ§ÁË*" << endl;
+		cout <<  "*æ”¾å­¦äº†*" << endl;
 		Sleep(2500);
-		cout <<  "*Äãµ½ÁË¼Ò*" << endl;
+		cout <<  "*ä½ åˆ°äº†å®¶*" << endl;
 		Sleep(2500);
 		Study();
 		Sleep(2500);
 		Slept();
 	}
 	if (day == 4) {
-		cout << mom  << "É£É£,ÆğÀ´À²..." << endl;
+		cout << mom  << "æ¡‘æ¡‘,èµ·æ¥å•¦..." << endl;
 		Sleep(2500);
 		cout << you  << "10:24!!!!!!!" << endl;
 		Sleep(2500);
 		Fight();
 		Sleep(2500);
-		cout <<  "*Äãµ½ÁËÑ§Ğ£*" << endl;
+		cout <<  "*ä½ åˆ°äº†å­¦æ ¡*" << endl;
 		Sleep(2500);
-		cout << "*Äã³Ùµ½ÁË*" << endl;
+		cout << "*ä½ è¿Ÿåˆ°äº†*" << endl;
 		Sleep(2500);
 		Eat();
 		Sleep(2500);
 		English();
 		Sleep(2500);
-		cout <<  "*·ÅÑ§ÁË*" << endl;
+		cout <<  "*æ”¾å­¦äº†*" << endl;
 		Sleep(2500);
-		cout <<  "*Äãµ½ÁË¼Ò*" << endl;
+		cout <<  "*ä½ åˆ°äº†å®¶*" << endl;
 		Sleep(2500);
 		Study();
 		Sleep(2500);
 		Slept();
 	}
 	if (day == 5) {
-		cout << mom  << "É£É£,¿ìÆğÀ´À²£¬ÉÏÑ§³Ùµ½À²£¡£¡£¡" << endl;
+		cout << mom  << "æ¡‘æ¡‘,å¿«èµ·æ¥å•¦ï¼Œä¸Šå­¦è¿Ÿåˆ°å•¦!!!" << endl;
 		Sleep(2500);
-		cout << you  << "ÎÒÖªµÀÁË" << endl;
+		cout << you  << "æˆ‘çŸ¥é“äº†" << endl;
 		Sleep(2500);
-		cout <<  "*Äãµ½ÁËÑ§Ğ£*" << endl;
+		cout <<  "*ä½ åˆ°äº†å­¦æ ¡*" << endl;
 		Sleep(2500);
 		Test();
 		Sleep(2500);
@@ -342,205 +356,205 @@ int Day(int day) {
 		Sleep(2500);
 		Chinese();
 		Sleep(2500);
-		cout <<  "*·ÅÑ§ÁË*" << endl;
+		cout <<  "*æ”¾å­¦äº†*" << endl;
 		Sleep(2500);
-		cout <<  "*Äãµ½ÁË¼Ò*" << endl;
+		cout <<  "*ä½ åˆ°äº†å®¶*" << endl;
 		Sleep(2500);
 		Study();
 		Sleep(2500);
 		Slept();
 	}
 	if (day == 6) {
-		cout << mom  << "É£É£,¿ìÆğÀ´À²£¬ÉÏÑ§³Ùµ½À²£¡£¡£¡" << endl;
+		cout << mom  << "æ¡‘æ¡‘,å¿«èµ·æ¥å•¦ï¼Œä¸Šå­¦è¿Ÿåˆ°å•¦!!!" << endl;
 		Sleep(2500);
-		cout << you  << "½ñÌìÖÜÄ©£¡£¡£¡" << endl;
+		cout << you  << "ä»Šå¤©å‘¨æœ«!!!" << endl;
 		Sleep(2500);
-		cout << mom  << "ÄÇ¾Í¶ÁÊé" << endl;
+		cout << mom  << "é‚£å°±è¯»ä¹¦" << endl;
 		Sleep(2500);
 		Read();
 		Sleep(2500);
 		Eat();
 		Sleep(2500);
-		cout << mom << "»¹¶ÁÂğ£¿" << endl;
-		cout << "*(¶Á/²»¶Á)*" << endl;
+		cout << mom << "è¿˜è¯»å—?" << endl;
+		cout << "*(è¯»/ä¸è¯»)*" << endl;
 		cin >> shuru;
-		if (shuru == "¶Á") {
-			cout << mom << "ºÃ" << endl;
+		if (shuru == "è¯»") {
+			cout << mom << "å¥½" << endl;
 			mx = mx + 5;
 		}
-		if (shuru == "²»¶Á") {
-			cout << mom << "Äã¿¼µÃÄÇÃ´²î£¬±ØĞë¶Á£¡£¡" << endl;
+		if (shuru == "ä¸è¯»") {
+			cout << mom << "ä½ è€ƒå¾—é‚£ä¹ˆå·®ï¼Œå¿…é¡»è¯»!!" << endl;
 			mx = mx - 5;
 			wx = wx - 5;
 		}
 		Read();
 		Sleep(2500);
-		cout <<  "*ÍíÉÏÁË*" << endl;
+		cout <<  "*æ™šä¸Šäº†*" << endl;
 		Sleep(2500);
 		Slept();
 	}
 	if (day == 7) {
-		cout << mom  << "É£É£,¿ìÆğÀ´À²£¬¶ÁÊé£¡£¡£¡" << endl;
+		cout << mom  << "æ¡‘æ¡‘,å¿«èµ·æ¥å•¦ï¼Œè¯»ä¹¦!!!" << endl;
 		Sleep(2500);
-		cout << you  << "ºÃ£¡£¡£¡" << endl;
+		cout << you  << "å¥½!!!" << endl;
 		Sleep(2500);
 		Read();
 		Sleep(2500);
 		Eat();
 		Sleep(2500);
-		cout << mom << "»¹¶ÁÂğ£¿" << endl;
-		cout << "*(¶Á/²»¶Á)*" << endl;
+		cout << mom << "è¿˜è¯»å—?" << endl;
+		cout << "*(è¯»/ä¸è¯»)*" << endl;
 		cin >> shuru;
-		if (shuru == "¶Á") {
-			cout << mom << "ºÃ" << endl;
+		if (shuru == "è¯»") {
+			cout << mom << "å¥½" << endl;
 			mx = mx + 5;
 		}
-		if (shuru == "²»¶Á") {
-			cout << mom << "Äã¿¼µÃÄÇÃ´²î£¬±ØĞë¶Á£¡£¡" << endl;
+		if (shuru == "ä¸è¯»") {
+			cout << mom << "ä½ è€ƒå¾—é‚£ä¹ˆå·®ï¼Œå¿…é¡»è¯»!!" << endl;
 			mx = mx - 5;
 			wx = wx - 5;
 		}
 		Read();
 		Sleep(2500);
-		cout <<  "*ÍíÉÏÁË*" << endl;
+		cout <<  "*æ™šä¸Šäº†*" << endl;
 		Sleep(2500);
 		Slept();
 	}
 	if (day == 8) {
-		cout << mom  << "É£É£,¿ìÆğÀ´À²£¬ÕâÖÜÎÒÅãÄãÉÏÑ§£¡£¡" << endl;
+		cout << mom  << "æ¡‘æ¡‘,å¿«èµ·æ¥å•¦ï¼Œè¿™å‘¨æˆ‘é™ªä½ ä¸Šå­¦!!" << endl;
 		Sleep(2500);
-		cout << you  << "ÎÒÖªµÀÁË" << endl;
+		cout << you  << "æˆ‘çŸ¥é“äº†" << endl;
 		Sleep(2500);
-		cout <<  "*Äãµ½ÁËÑ§Ğ£*" << endl;
+		cout <<  "*ä½ åˆ°äº†å­¦æ ¡*" << endl;
 		Sleep(2500);
 		Math();
 		Sleep(2500);
-		cout << mom  << "É£É£,ÄÑÃ´£¿" << endl;
+		cout << mom  << "æ¡‘æ¡‘,éš¾ä¹ˆ?" << endl;
 		Sleep(2500);
 		cout << you  << "..." << endl;
 		Sleep(2500);
 		Eat();
 		Sleep(2500);
-		cout << mom  << "É£É£,ºÃ³ÔÃ´£¿" << endl;
+		cout << mom  << "æ¡‘æ¡‘,å¥½åƒä¹ˆ?" << endl;
 		Sleep(2500);
 		cout << you  << "..." << endl;
 		Sleep(2500);
 		Chinese();
 		Sleep(2500);
-		cout << mom  << "É£É£,ÄÑÃ´£¿" << endl;
+		cout << mom  << "æ¡‘æ¡‘,éš¾ä¹ˆ?" << endl;
 		Sleep(2500);
 		cout << you  << "..." << endl;
 		Sleep(2500);
-		cout <<  "*·ÅÑ§ÁË*" << endl;
+		cout <<  "*æ”¾å­¦äº†*" << endl;
 		Sleep(2500);
-		cout <<  "*Äãµ½ÁË¼Ò*" << endl;
+		cout <<  "*ä½ åˆ°äº†å®¶*" << endl;
 		Sleep(2500);
 		Study();
 		Sleep(2500);
 		Slept();
 	}
 	if (day == 9) {
-		cout << mom  << "É£É£,¿ìÆğÀ´À²£¬ÉÏÑ§ÓÖ³Ùµ½À²£¡£¡£¡ÎÒÔÙÅãÄãÉÏÒ»´Î" << endl;
+		cout << mom  << "æ¡‘æ¡‘,å¿«èµ·æ¥å•¦ï¼Œä¸Šå­¦åˆè¿Ÿåˆ°å•¦!!!æˆ‘å†é™ªä½ ä¸Šä¸€æ¬¡" << endl;
 		Sleep(2500);
 		cout << you  << "..." << endl;
 		Sleep(2500);
-		cout <<  "*Äãµ½ÁËÑ§Ğ£*" << endl;
+		cout <<  "*ä½ åˆ°äº†å­¦æ ¡*" << endl;
 		Sleep(2500);
 		English();
 		Sleep(2500);
-		cout << mom  << "É£É£,ÄÑÃ´£¿" << endl;
+		cout << mom  << "æ¡‘æ¡‘,éš¾ä¹ˆ?" << endl;
 		Sleep(2500);
 		cout << you  << "..." << endl;
 		Sleep(2500);
 		Eat();
 		Sleep(2500);
-		cout << mom  << "É£É£,ºÃ³ÔÃ´£¿" << endl;
+		cout << mom  << "æ¡‘æ¡‘,å¥½åƒä¹ˆ?" << endl;
 		Sleep(2500);
 		cout << you  << "..." << endl;
 		Sleep(2500);
 		Chinese();
 		Sleep(2500);
-		cout << mom  << "É£É£,ÄÑÃ´£¿" << endl;
+		cout << mom  << "æ¡‘æ¡‘,éš¾ä¹ˆ?" << endl;
 		Sleep(2500);
 		cout << you  << "..." << endl;
 		Sleep(2500);
-		cout <<  "*·ÅÑ§ÁË*" << endl;
+		cout <<  "*æ”¾å­¦äº†*" << endl;
 		Sleep(2500);
-		cout <<  "*Äãµ½ÁË¼Ò*" << endl;
+		cout <<  "*ä½ åˆ°äº†å®¶*" << endl;
 		Sleep(2500);
 		Study();
 		Sleep(2500);
 		Slept();
 	}
 	if (day == 10) {
-		cout << mom  << "É£É£,¿ìÆğÀ´À²£¬ÉÏÑ§ÓÖ³Ùµ½À²£¡£¡£¡Äã×òÍíË¯µÃÌ«ÍíÁË£¡£¡£¡" << endl;
+		cout << mom  << "æ¡‘æ¡‘,å¿«èµ·æ¥å•¦ï¼Œä¸Šå­¦åˆè¿Ÿåˆ°å•¦!!!ä½ æ˜¨æ™šç¡å¾—å¤ªæ™šäº†!!!" << endl;
 		Sleep(2500);
-		cout << you  << "¶¼¹ÖÄã£¡£¡" << endl;
+		cout << you  << "éƒ½æ€ªä½ !!" << endl;
 		Sleep(2500);
 		Fight();
 		Sleep(2500);
-		cout <<  "*Äãµ½ÁËÑ§Ğ£*" << endl;
+		cout <<  "*ä½ åˆ°äº†å­¦æ ¡*" << endl;
 		Sleep(2500);
-		cout << "*Äã³Ùµ½ÁË*" << endl;
+		cout << "*ä½ è¿Ÿåˆ°äº†*" << endl;
 		Sleep(2500);
 		Eat();
 		Sleep(2500);
-		cout << mom  << "É£É£,ºÃ³ÔÃ´£¿" << endl;
+		cout << mom  << "æ¡‘æ¡‘,å¥½åƒä¹ˆ?" << endl;
 		Sleep(2500);
 		cout << you  << "..." << endl;
 		Sleep(2500);
 		Chinese();
 		Sleep(2500);
-		cout << mom  << "É£É£,ÄÑÃ´£¿" << endl;
+		cout << mom  << "æ¡‘æ¡‘,éš¾ä¹ˆ?" << endl;
 		Sleep(2500);
-		cout << you  << "·³ËÀÁË£¡£¡£¡£¡£¡£¡£¡" << endl;
+		cout << you  << "çƒ¦æ­»äº†!!!!!!!" << endl;
 		Sleep(2500);
 		Fight();
 		Sleep(2500);
-		cout <<  "*·ÅÑ§ÁË*" << endl;
+		cout <<  "*æ”¾å­¦äº†*" << endl;
 		Sleep(2500);
-		cout <<  "*Äãµ½ÁË¼Ò*" << endl;
+		cout <<  "*ä½ åˆ°äº†å®¶*" << endl;
 		Sleep(2500);
 		Study();
 		Sleep(2500);
 		Slept();
 	}
 	if (day == 11) {
-		cout << mom  << "É£É£,ÆğÀ´À²..." << endl;
+		cout << mom  << "æ¡‘æ¡‘,èµ·æ¥å•¦..." << endl;
 		Sleep(2500);
 		cout << you  << "11:00!!!!!!!" << endl;
 		Sleep(2500);
 		Fight();
 		Sleep(2500);
-		cout <<  "*Äãµ½ÁËÑ§Ğ£*" << endl;
+		cout <<  "*ä½ åˆ°äº†å­¦æ ¡*" << endl;
 		Sleep(2500);
-		cout << "*Äã³Ùµ½ÁË*" << endl;
+		cout << "*ä½ è¿Ÿåˆ°äº†*" << endl;
 		Sleep(2500);
 		Eat();
-		
+
 		Sleep(2500);
 		English();
 		Sleep(2500);
-		cout << mom  << "É£É£,ÄÑÃ´£¿" << endl;
+		cout << mom  << "æ¡‘æ¡‘,éš¾ä¹ˆ?" << endl;
 		Sleep(2500);
-		cout << you  << "ÎÒ****" << endl;
+		cout << you  << "æˆ‘****" << endl;
 		Sleep(2500);
 		Fight();
 		Sleep(2500);
-		cout <<  "*·ÅÑ§ÁË*" << endl;
+		cout <<  "*æ”¾å­¦äº†*" << endl;
 		Sleep(2500);
-		cout <<  "*Äãµ½ÁË¼Ò*" << endl;
+		cout <<  "*ä½ åˆ°äº†å®¶*" << endl;
 		Sleep(2500);
 		Study();
 		Sleep(2500);
 		Slept();
 	}
 	if (day == 12) {
-		cout << mom  << "É£É£,¿ìÆğÀ´À²£¬ÉÏÑ§³Ùµ½À²£¡£¡£¡" << endl;
+		cout << mom  << "æ¡‘æ¡‘,å¿«èµ·æ¥å•¦ï¼Œä¸Šå­¦è¿Ÿåˆ°å•¦!!!" << endl;
 		Sleep(2500);
-		cout << you  << "ÎÒÖªµÀÁË" << endl;
+		cout << you  << "æˆ‘çŸ¥é“äº†" << endl;
 		Sleep(2500);
-		cout <<  "*Äãµ½ÁËÑ§Ğ£*" << endl;
+		cout <<  "*ä½ åˆ°äº†å­¦æ ¡*" << endl;
 		Sleep(2500);
 		Test();
 		Sleep(2500);
@@ -548,72 +562,72 @@ int Day(int day) {
 		Sleep(2500);
 		Chinese();
 		Sleep(2500);
-		cout <<  "*·ÅÑ§ÁË*" << endl;
+		cout <<  "*æ”¾å­¦äº†*" << endl;
 		Sleep(2500);
-		cout <<  "*Äãµ½ÁË¼Ò*" << endl;
+		cout <<  "*ä½ åˆ°äº†å®¶*" << endl;
 		Sleep(2500);
 		Study();
 		Sleep(2500);
 		Slept();
 	}
 	if (day == 13) {
-		cout << mom  << "É£É£,¿ìÆğÀ´À²£¡£¡£¡½ñÌìÖÜÄ©£¡£¡£¡¶ÁÊé!!!" << endl;
+		cout << mom  << "æ¡‘æ¡‘,å¿«èµ·æ¥å•¦!!!ä»Šå¤©å‘¨æœ«!!!è¯»ä¹¦!!!" << endl;
 		Sleep(2500);
 		Read();
 		Sleep(2500);
 		Eat();
 		Sleep(2500);
-		cout << mom << "»¹¶ÁÂğ£¿" << endl;
-		cout << "*(¶Á/²»¶Á)*" << endl;
+		cout << mom << "è¿˜è¯»å—?" << endl;
+		cout << "*(è¯»/ä¸è¯»)*" << endl;
 		cin >> shuru;
-		if (shuru == "¶Á") {
-			cout << mom << "ºÃ" << endl;
+		if (shuru == "è¯»") {
+			cout << mom << "å¥½" << endl;
 			mx = mx + 5;
 		}
-		if (shuru == "²»¶Á") {
-			cout << mom << "Äã¿¼µÃÄÇÃ´²î£¬±ØĞë¶Á£¡£¡" << endl;
+		if (shuru == "ä¸è¯»") {
+			cout << mom << "ä½ è€ƒå¾—é‚£ä¹ˆå·®ï¼Œå¿…é¡»è¯»!!" << endl;
 			mx = mx - 5;
 			wx = wx - 5;
 		}
 		Read();
 		Sleep(2500);
-		cout <<  "*ÍíÉÏÁË*" << endl;
+		cout <<  "*æ™šä¸Šäº†*" << endl;
 		Sleep(2500);
 		Slept();
 	}
 	if (day == 14) {
-		cout << mom  << "É£É£,¿ìÆğÀ´À²£¬¶ÁÊé£¡£¡£¡" << endl;
+		cout << mom  << "æ¡‘æ¡‘,å¿«èµ·æ¥å•¦ï¼Œè¯»ä¹¦!!!" << endl;
 		Sleep(2500);
-		cout << you  << "ÎÒ****£¬Äã****" << endl;
+		cout << you  << "æˆ‘****ï¼Œä½ ****" << endl;
 		Sleep(2500);
 		Fight();
 		Sleep(2500);
 		Eat();
 		Sleep(2500);
-		cout << mom << "»¹¶ÁÂğ£¿" << endl;
-		cout << "*(¶Á/²»¶Á)*" << endl;
+		cout << mom << "è¿˜è¯»å—?" << endl;
+		cout << "*(è¯»/ä¸è¯»)*" << endl;
 		cin >> shuru;
-		if (shuru == "¶Á") {
-			cout << mom << "ºÃ" << endl;
+		if (shuru == "è¯»") {
+			cout << mom << "å¥½" << endl;
 			mx = mx + 5;
 		}
-		if (shuru == "²»¶Á") {
-			cout << mom << "Äã¿¼µÃÄÇÃ´²î£¬±ØĞë¶Á£¡£¡" << endl;
+		if (shuru == "ä¸è¯»") {
+			cout << mom << "ä½ è€ƒå¾—é‚£ä¹ˆå·®ï¼Œå¿…é¡»è¯»!!" << endl;
 			mx = mx - 5;
 			wx = wx - 5;
 		}
 		Read();
 		Sleep(2500);
-		cout <<  "*ÍíÉÏÁË*" << endl;
+		cout <<  "*æ™šä¸Šäº†*" << endl;
 		Sleep(2500);
 		Slept();
 	}
 	if (day == 15) {
-		cout << mom  << "É£É£,¿ìÆğÀ´À²£¬ÕâÖÜÎÒ²»ÅãÄãÉÏÑ§£¡£¡" << endl;
+		cout << mom  << "æ¡‘æ¡‘,å¿«èµ·æ¥å•¦ï¼Œè¿™å‘¨æˆ‘ä¸é™ªä½ ä¸Šå­¦!!" << endl;
 		Sleep(2500);
-		cout << you  << "ÎÒÖªµÀÁË" << endl;
+		cout << you  << "æˆ‘çŸ¥é“äº†" << endl;
 		Sleep(2500);
-		cout <<  "*Äãµ½ÁËÑ§Ğ£*" << endl;
+		cout <<  "*ä½ åˆ°äº†å­¦æ ¡*" << endl;
 		Sleep(2500);
 		Math();
 		Sleep(2500);
@@ -621,20 +635,20 @@ int Day(int day) {
 		Sleep(2500);
 		Chinese();
 		Sleep(2500);
-		cout <<  "*·ÅÑ§ÁË*" << endl;
+		cout <<  "*æ”¾å­¦äº†*" << endl;
 		Sleep(2500);
-		cout <<  "*Äãµ½ÁË¼Ò*" << endl;
+		cout <<  "*ä½ åˆ°äº†å®¶*" << endl;
 		Sleep(2500);
 		Study();
 		Sleep(2500);
 		Slept();
 	}
 	if (day == 16) {
-		cout << mom  << "É£É£,¿ìÆğÀ´À²£¬ÉÏÑ§ÓÖ³Ùµ½À²£¡£¡£¡" << endl;
+		cout << mom  << "æ¡‘æ¡‘,å¿«èµ·æ¥å•¦ï¼Œä¸Šå­¦åˆè¿Ÿåˆ°å•¦!!!" << endl;
 		Sleep(2500);
 		cout << you  << "..." << endl;
 		Sleep(2500);
-		cout <<  "*Äãµ½ÁËÑ§Ğ£*" << endl;
+		cout <<  "*ä½ åˆ°äº†å­¦æ ¡*" << endl;
 		Sleep(2500);
 		English();
 		Sleep(2500);
@@ -642,72 +656,72 @@ int Day(int day) {
 		Sleep(2500);
 		Chinese();
 		Sleep(2500);
-		cout <<  "*·ÅÑ§ÁË*" << endl;
+		cout <<  "*æ”¾å­¦äº†*" << endl;
 		Sleep(2500);
-		cout <<  "*Äãµ½ÁË¼Ò*" << endl;
+		cout <<  "*ä½ åˆ°äº†å®¶*" << endl;
 		Sleep(2500);
 		Study();
 		Sleep(2500);
 		Slept();
 	}
 	if (day == 17) {
-		cout << mom  << "É£É£,¿ìÆğÀ´À²£¬ÉÏÑ§ÓÖ³Ùµ½À²£¡£¡£¡Äã×òÍíË¯µÃÌ«ÍíÁË£¡£¡£¡" << endl;
+		cout << mom  << "æ¡‘æ¡‘,å¿«èµ·æ¥å•¦ï¼Œä¸Šå­¦åˆè¿Ÿåˆ°å•¦!!!ä½ æ˜¨æ™šç¡å¾—å¤ªæ™šäº†!!!" << endl;
 		Sleep(2500);
-		cout << you  << "¶¼¹ÖÄã£¡£¡" << endl;
+		cout << you  << "éƒ½æ€ªä½ !!" << endl;
 		Sleep(2500);
 		Fight();
 		Sleep(2500);
-		cout <<  "*Äãµ½ÁËÑ§Ğ£*" << endl;
+		cout <<  "*ä½ åˆ°äº†å­¦æ ¡*" << endl;
 		Sleep(2500);
-		cout << "*Äã³Ùµ½ÁË*" << endl;
+		cout << "*ä½ è¿Ÿåˆ°äº†*" << endl;
 		Sleep(2500);
 		Eat();
 		Sleep(2500);
 		Chinese();
 		Sleep(2500);
-		cout << mom  << "...É£É£,ÄÑÃ´£¿..." << endl;
+		cout << mom  << "...æ¡‘æ¡‘,éš¾ä¹ˆ?..." << endl;
 		Sleep(2500);
-		cout << you  << "Äã****ÔòÃ´ÓÖÀ´À²£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡" << endl;
+		cout << you  << "ä½ ****åˆ™ä¹ˆåˆæ¥å•¦!!!!!!!!!!" << endl;
 		Sleep(2500);
 		Fight();
 		Sleep(2500);
-		cout <<  "*·ÅÑ§ÁË*" << endl;
+		cout <<  "*æ”¾å­¦äº†*" << endl;
 		Sleep(2500);
-		cout <<  "*Äãµ½ÁË¼Ò*" << endl;
+		cout <<  "*ä½ åˆ°äº†å®¶*" << endl;
 		Sleep(2500);
 		Study();
 		Sleep(2500);
 		Slept();
 	}
 	if (day == 18) {
-		cout << mom  << "É£É£,ÆğÀ´À²..." << endl;
+		cout << mom  << "æ¡‘æ¡‘,èµ·æ¥å•¦..." << endl;
 		Sleep(2500);
 		cout << you  << "..." << endl;
 		Sleep(2500);
 		Fight();
 		Sleep(2500);
-		cout <<  "*Äãµ½ÁËÑ§Ğ£*" << endl;
+		cout <<  "*ä½ åˆ°äº†å­¦æ ¡*" << endl;
 		Sleep(2500);
-		cout << "*Äã³Ùµ½ÁË*" << endl;
+		cout << "*ä½ è¿Ÿåˆ°äº†*" << endl;
 		Sleep(2500);
 		Eat();
 		Sleep(2500);
 		English();
 		Sleep(2500);
-		cout <<  "*·ÅÑ§ÁË*" << endl;
+		cout <<  "*æ”¾å­¦äº†*" << endl;
 		Sleep(2500);
-		cout <<  "*Äãµ½ÁË¼Ò*" << endl;
+		cout <<  "*ä½ åˆ°äº†å®¶*" << endl;
 		Sleep(2500);
 		Study();
 		Sleep(2500);
 		Slept();
 	}
 	if (day == 19) {
-		cout << mom  << "É£É£,¿ìÆğÀ´À²£¬ÉÏÑ§³Ùµ½À²£¡£¡£¡" << endl;
+		cout << mom  << "æ¡‘æ¡‘,å¿«èµ·æ¥å•¦ï¼Œä¸Šå­¦è¿Ÿåˆ°å•¦!!!" << endl;
 		Sleep(2500);
-		cout << you  << "ÎÒÖªµÀÁË" << endl;
+		cout << you  << "æˆ‘çŸ¥é“äº†" << endl;
 		Sleep(2500);
-		cout <<  "*Äãµ½ÁËÑ§Ğ£*" << endl;
+		cout <<  "*ä½ åˆ°äº†å­¦æ ¡*" << endl;
 		Sleep(2500);
 		Test();
 		Sleep(2500);
@@ -715,16 +729,16 @@ int Day(int day) {
 		Sleep(2500);
 		Chinese();
 		Sleep(2500);
-		cout <<  "*·ÅÑ§ÁË*" << endl;
+		cout <<  "*æ”¾å­¦äº†*" << endl;
 		Sleep(2500);
-		cout <<  "*Äãµ½ÁË¼Ò*" << endl;
+		cout <<  "*ä½ åˆ°äº†å®¶*" << endl;
 		Sleep(2500);
 		Study();
 		Sleep(2500);
 		Slept();
 	}
 	if (day == 20) {
-		cout << mom  << "É£É£,¿ìÆğÀ´À²£¡£¡£¡½ñÌìÖĞ¿¼" << endl;
+		cout << mom  << "æ¡‘æ¡‘,å¿«èµ·æ¥å•¦!!!ä»Šå¤©ä¸­è€ƒ" << endl;
 		Sleep(2500);
 		Test();
 		Sleep(2500);
@@ -732,80 +746,82 @@ int Day(int day) {
 		Sleep(2500);
 		Test();
 		Sleep(2500);
-		cout <<  "*ÍíÉÏÁË*" << endl;
+		cout <<  "*æ™šä¸Šäº†*" << endl;
 		Sleep(2500);
 		Slept();
 	}
 	if (day == 21) {
-		cout << mom  << "É£É£,¿ìÆğÀ´À²£¡£¡£¡½ñÌìÖĞ¿¼" << endl;
+		cout << mom  << "æ¡‘æ¡‘,å¿«èµ·æ¥å•¦!!!ä»Šå¤©ä¸­è€ƒ" << endl;
 		Test();
 		Sleep(2500);
 		Eat();
 		Sleep(2500);
 		Test();
 		Sleep(2500);
-		cout <<  "*ÍíÉÏÁË*" << endl;
+		cout <<  "*æ™šä¸Šäº†*" << endl;
 		Sleep(2500);
 		Slept();
+	}
+	if (day > 21) {
 		GAMEMODE = "win";
 	}
 	return 0;
 }
 int main() {
-	cout << "»¶Ó­À´µ½¡° ÏÖÊµÉú»îÖĞµÄË®»ğ²»Èİ-ÎÒµÄÉú»î¡±" << endl << "¾İÕæÊµÊÂ¼ş¸Ä±à£¡" << "Made By GHY And ZYX" << endl;
+	cout << "æ¬¢è¿æ¥åˆ°â€œ ç°å®ç”Ÿæ´»ä¸­çš„æ°´ç«ä¸å®¹-æˆ‘çš„ç”Ÿæ´»â€" << endl << "æ®çœŸå®äº‹ä»¶æ”¹ç¼–!" << "Made By GHY And ZYX" << endl;
 	while (GAMEMODE == "ready") {
-		cout << "ĞÂµÄÓÎÏ·/¶Áµµ" << endl;
+		cout << "æ–°çš„æ¸¸æˆ/è¯»æ¡£" << endl;
 		cin >> shuru;
-		if (shuru == "ĞÂµÄÓÎÏ·") {
+		if (shuru == "æ–°çš„æ¸¸æˆ") {
 			GAMEMODE = "star";
-		} else if (shuru == "¶Áµµ") {
+		} else if (shuru == "è¯»æ¡£") {
 			GAMEMODE = "dudang";
 		} else {
-			cout << "ÇëÊäÈëÕıÈ·´Ê×é(Èç:ĞÂµÄÓÎÏ·)" << endl;
+			cout << "è¯·è¾“å…¥æ­£ç¡®è¯ç»„(å¦‚:æ–°çš„æ¸¸æˆ)" << endl;
 		}
 	}
 	if (GAMEMODE == "dudang") {
 		int jym = 0;
-		cout << "ÇëÊäÈë±£´æÂë" << endl;
+		cout << "è¯·è¾“å…¥ä¿å­˜ç " << endl;
 		while (GAMEMODE == "dudang") {
 			cin >> ml >> wl >> q >> wx >> mx >> days >> zz >> jym;
 			if (jym == ml + wl + q + wx + mx + days + zz) {
 				GAMEMODE = "star";
 			} else {
-				cout << "ÇëÊäÈëÕıÈ·±£´æÂë(¿ÉÄÜ¸÷°æ±¾¼ä»á²»¼æÈİ)" << endl;
+				cout << "è¯·è¾“å…¥æ­£ç¡®ä¿å­˜ç (å¯èƒ½å„ç‰ˆæœ¬é—´ä¼šä¸å…¼å®¹)" << endl;
 			}
 		}
 	}
 	if (GAMEMODE == "star") {
-		for (int i = days; i <= 110; i++) {
-			cout <<  "*µÚ" << i << "Ìì,»¹ÓĞ" << 21 - i << "Ìì" << endl;
+		for (int i = days; i <= 21; i++) {
+			cout <<  "*ç¬¬" << i << "å¤©,è¿˜æœ‰" << 21 - i << "å¤©" << endl;
 			Day(i);
 		}
 	}
 	if  (GAMEMODE == "momdie") {
-		cout << "*Ğ¡Ñ©¸ÁÁË¡£¿ÉÄÜÊÇĞÄÇé²»ºÃ£¬×Ô¸Á;Ò²¿ÉÄÜÊÇ±»´ò¸ÁÁË¡£ÈËÊÀÖ»ÓĞÒ»´Î¡£µ«ÕâÊÇÓÎÏ·£¬ÄÜÈ¥¶Áµµ¡£*" << endl;
+		cout << "*å°é›ªå™¶äº†?å¯èƒ½æ˜¯å¿ƒæƒ…ä¸å¥½ï¼Œè‡ªå™¶;ä¹Ÿå¯èƒ½æ˜¯è¢«æ‰“å™¶äº†ã€‚äººä¸–åªæœ‰ä¸€æ¬¡ã€‚ä½†è¿™æ˜¯æ¸¸æˆï¼Œèƒ½å»è¯»æ¡£ã€‚*" << endl;
 		cout << "*GAME OVER*" << endl;
-		cout << "*ÓÎÏ·½áÊø*" << endl;
+		cout << "*æ¸¸æˆç»“æŸ*" << endl;
 		cin >> temp;
 	}
 	if (GAMEMODE == "medie") {
-		cout << "*É£É£¸ÁÁË¡£¿ÉÄÜÊÇĞÄÇé²»ºÃ£¬×Ô¸Á;Ò²¿ÉÄÜÊÇ±»´ò¸ÁÁË¡£ÈËÊÀÖ»ÓĞÒ»´Î¡£µ«ÕâÊÇÓÎÏ·£¬ÄÜÈ¥¶Áµµ¡£*" << endl;
+		cout << "*æ¡‘æ¡‘å™¶äº†?å¯èƒ½æ˜¯å¿ƒæƒ…ä¸å¥½ï¼Œè‡ªå™¶;ä¹Ÿå¯èƒ½æ˜¯è¢«æ‰“å™¶äº†ã€‚äººä¸–åªæœ‰ä¸€æ¬¡ã€‚ä½†è¿™æ˜¯æ¸¸æˆï¼Œèƒ½å»è¯»æ¡£ã€‚*" << endl;
 		cout << "*GAME OVER*" << endl;
-		cout << "*ÓÎÏ·½áÊø*" << endl;
+		cout << "*æ¸¸æˆç»“æŸ*" << endl;
 		cin >> temp;
 	}
 	if (GAMEMODE == "win") {
-		cout << "*ÄãÓ®ÁË*" << endl;
+		cout << "*ä½ èµ¢äº†*" << endl;
 		Sleep(2500);
-		cout << "×÷Õß(GHY):±§Ç¸£¬ÎÒÖ»×öµ½ÁËÕâÀï£¬¸ĞĞ»ÄãµÄÓÎÍæ£¡ÎÒ»á¸üĞÂµÄ£¡(bilibili:   th_96301)" << endl;
+		cout << "ä½œè€…(GHY):æŠ±æ­‰ï¼Œæˆ‘åªåšåˆ°äº†è¿™é‡Œï¼Œæ„Ÿè°¢ä½ çš„æ¸¸ç©!æˆ‘ä¼šæ›´æ–°çš„!(bilibili:   th_96301)" << endl;
 		Sleep(2500);
-		cout << "¾çÇé(ZYX)(É£É£):ÕâÊÇÎÒµÄÕæÊµÉú»î£¬¸ĞĞ»ÄãµÄÓÎÍæ£¡£¨ÎÒÒª±»·³¸ÁÁË£©" << endl;
+		cout << "å‰§æƒ…(ZYX)(æ¡‘æ¡‘):è¿™æ˜¯æˆ‘çš„çœŸå®ç”Ÿæ´»ï¼Œæ„Ÿè°¢ä½ çš„æ¸¸ç©!ï¼ˆæˆ‘è¦è¢«çƒ¦å™¶äº†ï¼‰" << endl;
 		Sleep(2500);
-		cout << mom << "ÉçÃ´£¿£¿£¿£¿£¡£¡£¡£¡£¡" << endl;
+		cout << mom << "ç¤¾ä¹ˆ????!!!!!" << endl;
 		Sleep(2500);
-		cout << "×÷Õß(GHY):¿ìÌÓ£¡" << endl;
+		cout << "ä½œè€…(GHY):å¿«é€ƒ!" << endl;
 		Sleep(2500);
-		cout << mom << "ÎÒ****£¬Äã****£¬****£¬****£¡" << endl;
+		cout << mom << "æˆ‘****ï¼Œä½ ****ï¼Œ****ï¼Œ****!" << endl;
 		cin >> temp;
 	}
 	return 0;
