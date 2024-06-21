@@ -84,7 +84,7 @@ int Slept() {
 		cout <<  "*睡着了......*" << endl;
 	}
 	Wait(2);
-	cout <<  "*保存码:" << ml << " " << wl << " " << q << " " << wx << " " << mx << " " << days << " " << zz << " " << ml + wl + q + wx + mx + days + zz << "*" << endl;
+	cout <<  "*保存码:" << ml << " " << wl << " " << q << " " << wx << " " << mx << " " << days + 1 << " " << zz << " " << ml + wl + q + wx + mx + days + zz << "*" << endl;
 	cout << "*请妥善保管!*" << endl;
 	Wait(5);
 	if (ml <= 0) {
@@ -333,7 +333,16 @@ int Day(int day) {
 		Sleep(2500);
 		Eat();
 		Sleep(2500);
-		English();
+		cout <<  "*適兯湜焱暒妏(这节是火星文)*" << endl;
+		Wait(5);
+		if (zz >= 50) {
+			cout <<  "*佷輕菘哋，適兯錁唍孒(很轻松地，这节课完了)*" << endl;
+			zz++;
+		}
+		if (zz < 50) {
+			cout <<  "*佷涃難哋，適兯錁唍孒(很困难地，这节课完了)*" << endl;
+			zz++;
+		}
 		Sleep(2500);
 		cout <<  "*放学了*" << endl;
 		Sleep(2500);
@@ -354,7 +363,16 @@ int Day(int day) {
 		Sleep(2500);
 		Eat();
 		Sleep(2500);
-		Chinese();
+		cout <<  "*zhè jié shì pīn yīn(这节是拼音)*" << endl;
+		Wait(5);
+		if (zz >= 50) {
+			cout <<  "*hěn qīng sōng dì, zhè jié kè wán le(很轻松地，这节课完了)*" << endl;
+			zz++;
+		}
+		if (zz < 50) {
+			cout <<  "*hěn kùn nán dì, zhè jié kè wán le(很困难地，这节课完了)*" << endl;
+			zz++;
+		}
 		Sleep(2500);
 		cout <<  "*放学了*" << endl;
 		Sleep(2500);
@@ -427,7 +445,16 @@ int Day(int day) {
 		Sleep(2500);
 		cout <<  "*你到了学校*" << endl;
 		Sleep(2500);
-		Math();
+		cout <<  "*このセクションは日本語です(本节为日语)*" << endl;
+		Wait(5);
+		if (zz >= 50) {
+			cout <<  "*あっさりとレッスンは終わりました(课程转眼就结束了。)*" << endl;
+			zz++;
+		}
+		if (zz < 50) {
+			cout <<  "*大変な苦労をして、レッスンは終わりました(经过一番努力，课程结束了)*" << endl;
+			zz++;
+		}
 		Sleep(2500);
 		cout << mom  << "桑桑,难么?" << endl;
 		Sleep(2500);
@@ -439,7 +466,16 @@ int Day(int day) {
 		Sleep(2500);
 		cout << you  << "..." << endl;
 		Sleep(2500);
-		Chinese();
+		cout <<  "*这节是体育(跑)*" << endl;
+		Wait(5);
+		if (zz >= 50) {
+			cout <<  "*很轻松地，这节课完了*" << endl;
+			zz++;
+		}
+		if (zz < 50) {
+			cout <<  "*很(累)困难(累)地，这(累)节(累)课(累)完了*" << endl;
+			zz++;
+		}
 		Sleep(2500);
 		cout << mom  << "桑桑,难么?" << endl;
 		Sleep(2500);
@@ -460,7 +496,16 @@ int Day(int day) {
 		Sleep(2500);
 		cout <<  "*你到了学校*" << endl;
 		Sleep(2500);
-		English();
+		cout <<  "*Этот раздел на русском языке(本节为俄语)*" << endl;
+		Wait(5);
+		if (zz >= 50) {
+			cout <<  "*Урок легко закончился(这节课很容易就结束了)*" << endl;
+			zz++;
+		}
+		if (zz < 50) {
+			cout <<  "*С большим трудом урок был окончен(好不容易，这节课就结束了)*" << endl;
+			zz++;
+		}
 		Sleep(2500);
 		cout << mom  << "桑桑,难么?" << endl;
 		Sleep(2500);
@@ -472,7 +517,34 @@ int Day(int day) {
 		Sleep(2500);
 		cout << you  << "..." << endl;
 		Sleep(2500);
-		Chinese();
+		cout <<  "cout << “ *这节是信息*”<<endl;" << endl;
+		Sleep(1000);
+		cout <<  "小游戏.exe##-口X" << endl;
+		Sleep(200);
+		cout <<  "#    @   $     #" << endl;
+		Sleep(200);
+		cout <<  "#   @@@  $     #" << endl;
+		Sleep(200);
+		cout <<  "#  @@@   $     #" << endl;
+		Sleep(200);
+		cout <<  "#        $    &#" << endl;
+		Sleep(200);
+		cout <<  "#        $  &&&#" << endl;
+		Sleep(200);
+		cout <<  "#&& && & $&&&&&#" << endl;
+		Sleep(200);
+		cout <<  "#&&&&&&&&&&&&&&#" << endl;
+		Sleep(200);
+		cout <<  "################" << endl;
+		Wait(5);
+		if (zz >= 50) {
+			cout <<  "cout << “ *很轻松地，这节课完了*”<<endl;" << endl;
+			zz++;
+		}
+		if (zz < 50) {
+			cout <<  "cout << “ *很困难地，这节课完了*”<<endl;" << endl;
+			zz++;
+		}
 		Sleep(2500);
 		cout << mom  << "桑桑,难么?" << endl;
 		Sleep(2500);
@@ -503,7 +575,16 @@ int Day(int day) {
 		Sleep(2500);
 		cout << you  << "..." << endl;
 		Sleep(2500);
-		Chinese();
+		cout <<  "*Ce verset est en francais(这节经文是法文的)*" << endl;
+		Wait(5);
+		if (zz >= 50) {
+			cout <<  "*Facilement, la le?on était terminée(不难，课程就结束了)*" << endl;
+			zz++;
+		}
+		if (zz < 50) {
+			cout <<  "*Avec beaucoup de difficulté, la le?on était terminée(好不容易，这节课就结束了)*" << endl;
+			zz++;
+		}
 		Sleep(2500);
 		cout << mom  << "桑桑,难么?" << endl;
 		Sleep(2500);
@@ -531,9 +612,38 @@ int Day(int day) {
 		cout << "*你迟到了*" << endl;
 		Sleep(2500);
 		Eat();
-
 		Sleep(2500);
-		English();
+		cout <<  "*这节是画画*" << endl;
+		
+		Wait(5);
+		cout <<  "################" << endl;
+		Sleep(200);
+		cout <<  "#   @    @     #" << endl;
+		Sleep(200);
+		cout <<  "#   @@  @@  _  #" << endl;
+		Sleep(200);
+		cout <<  "#   @@@@@@   _ #" << endl;
+		Sleep(200);
+		cout <<  "# - @    @     #" << endl;
+		Sleep(200);
+		cout <<  "#   @    @  -  #" << endl;
+		Sleep(200);
+		cout <<  "#   @ _  @   - #" << endl;
+		Sleep(200);
+		cout <<  "#   @@@@@@     #" << endl;
+		Sleep(200);
+		cout <<  "################" << endl;
+		Sleep(2500);
+		cout <<  "好丑......" << endl;
+		Sleep(1000);
+		if (zz >= 50) {
+			cout <<  "*很轻松地，这节课完了*" << endl;
+			zz++;
+		}
+		if (zz < 50) {
+			cout <<  "*很困难地，这节课完了*" << endl;
+			zz++;
+		}
 		Sleep(2500);
 		cout << mom  << "桑桑,难么?" << endl;
 		Sleep(2500);
@@ -765,6 +875,10 @@ int Day(int day) {
 	if (day > 21) {
 		GAMEMODE = "win";
 	}
+	if (day <= 0) {
+		cout << "*这...这__不____可能！你找__到____了不__存______在的天____数！__！！*" << endl;
+		GAMEMODE = "win";
+	}
 	return 0;
 }
 int main() {
@@ -776,6 +890,8 @@ int main() {
 			GAMEMODE = "star";
 		} else if (shuru == "读档") {
 			GAMEMODE = "dudang";
+		} else if (shuru == "debug") {
+			GAMEMODE = "debug";
 		} else {
 			cout << "请输入正确词组(如:新的游戏)" << endl;
 		}
@@ -785,17 +901,26 @@ int main() {
 		cout << "请输入保存码" << endl;
 		while (GAMEMODE == "dudang") {
 			cin >> ml >> wl >> q >> wx >> mx >> days >> zz >> jym;
-			if (jym == ml + wl + q + wx + mx + days + zz) {
+			if (jym == ml + wl + q + wx + mx + days + zz || jym == 114514) {
 				GAMEMODE = "star";
 			} else {
 				cout << "请输入正确保存码(可能各版本间会不兼容)" << endl;
 			}
 		}
 	}
+	if (GAMEMODE == "debug") {
+		while (GAMEMODE == "debug") {
+			cout  << "天数" ;
+			cin >> days ;
+			GAMEMODE = "star";
+		}
+	}
 	if (GAMEMODE == "star") {
 		for (int i = days; i <= 21; i++) {
-			cout <<  "*第" << i << "天,还有" << 21 - i << "天" << endl;
-			Day(i);
+			if (GAMEMODE == "star") {
+				cout <<  "*第" << i << "天,还有" << 21 - i << "天" << endl;
+				Day(i);
+			}
 		}
 	}
 	if  (GAMEMODE == "momdie") {
@@ -817,7 +942,7 @@ int main() {
 		Sleep(2500);
 		cout << "剧情(ZYX)(桑桑):这是我的真实生活，感谢你的游玩!（我要被烦噶了）" << endl;
 		Sleep(2500);
-		cout << mom << "社么????!!!!!" << endl;
+		cout << mom << "什么???? !!!!!" << endl;
 		Sleep(2500);
 		cout << "作者(GHY):快逃!" << endl;
 		Sleep(2500);
